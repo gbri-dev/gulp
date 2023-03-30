@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  padding-top: 60px;
+  padding-left: 40px;
+  padding-bottom: 45px;
+  overflow: hidden;
+}
+
+.contato-form {
+  padding: 0 30px;
+  margin-top: 40px;
+}
+
+.contato-form input[type=text],
+input[type=email],
+select,
+textarea {
+  width: 100%;
+  height: 48px;
+  margin-bottom: 15px;
+  border: solid 1px #e3e3e3;
+  padding-left: 8px;
+  font-size: 16px;
+  box-shadow: 0 2px 4px 0 rgba(92, 99, 110, 0.1);
+  resize: none;
+}
+
+.contato-form input[type=submit] {
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  box-shadow: 0 20px 30px 0 rgba(203, 203, 203, 0.2);
+  background-color: #212a97;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 17px;
+}
+
+.mapa-container {
+  width: 100%;
+  padding-top: 7%;
+  position: static;
+}
+
+.text-muted {
+  display: none;
+  color: red;
+}
+
+.invalid {
+  color: red;
+  border: solid 1px #971010;
+}
+
+@media (max-width: 600px) {
+  .framerMapa {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mapa-container {
+    padding: 0;
+    margin: 0;
+    position: static;
+  }
+
+  main {
+    padding: 0;
+    overflow: hidden;
+  }
+}

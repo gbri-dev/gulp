@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./vendor/owl/css/owl.css">
+  <link rel="stylesheet" href="./vendor/fontawesome/fontawesome.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/contato.css">
+  <title>TechGol - Contato</title>
+</head>
+
+<body>
+  <!--Menu responsivo -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="https://www.techgolinfo.com.br/" target="_blank">
+        <div class="logo"><img src="assets/images/logo-md.png" alt="">
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="./index.html">Início
+              <!-- <span class="sr-only">(Pág)</span> -->
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#featured">Produtos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#sobreNos">Sobre nós</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#entrarEmContato">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="mapa-container">
+          <div id="mapa"><!---->
+            <iframe class="framerMapa"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235.90530203206865!2d-40.073144325735925!3d-18.90992227129217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb5fd316a369417%3A0x17f9161212cff0bd!2sTech%20Gol!5e0!3m2!1spt-BR!2sbr!4v1680117263039!5m2!1spt-BR!2sbr"
+              width="600" height="450" style="border:0;" allowfullscreen="true" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="w50 contato-form">
+          <form>
+            <h1 id="entrarEmContato">Contate-nos</h1>
+            <small id="helpNome" class="text-muted">Nome inválido, digite mais de 3
+              caracteres!</small>
+            <input placeholder="João Batista..." type="text" name="nome" id="nome" aria-describedby="helpNome">
+            <small id="helpEmail" class="text-muted">email inválido, precisa conter @ e .com!</small>
+            <input placeholder="email@example.com" type="email" name="email" id="email" aria-describedby="helpEmail">
+            <small id="helpTell" class="text-muted">Digite um número válido!</small>
+            <input placeholder="DDD+ 9 ..." type="text" name="phone_with_ddd" id="phone_with_ddd"
+              aria-describedby="helpTell">
+            <small id="helpCEP" class="text-muted">CEP inválido!</small>
+            <input placeholder="00000-000 / CEP" type="text" name="CEP" id="cep" aria-describedby="helpCEP">
+            <select name="" id="">
+              <option value="">Geral</option>
+              <option value="">Suporte</option>
+            </select>
+            <textarea placeholder="Mensagem" name="" id="" cols="30" rows="10"></textarea>
+            <input type="submit" value="Enviar!">
+          </form>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- INSCREVA-SE NA NOSSAS NEWSLETTERS-->
+  <section id="cadastro" class="visually-hidden cadastro">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 col-sm-12">
+          <h2>Receba novidades e ofertas incríveis!</h2>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="row g-3">
+          <div class="col-md-3"></div>
+          <div class="col-md-6 input-group-lg">
+            <input type="text" class="form-control" name="nome" placeholder="ex: João" id="nomeInput">
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-3"></div>
+          <div class="col-md-6 input-group-lg">
+            <input type="text" class="form-control" name="Email" placeholder="Digite seu e-mail" id="emailInput"
+              aria-describedby="inputGroup-sizing-lg">
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+            <button type="submit" class="btn btn-lg" id="btnCadastrar">Cadastrar-se</button>
+          </div>
+          <div class="col-md-1"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- RODAPÉ -->
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <a class="navbar-brand" href="https://www.techgolinfo.com.br/" target="_blank">
+            <img src="assets/images/logo-lg.png" alt="logo tech gol" class="logo-rp">
+          </a>
+        </div>
+        <div class="col-md-12">
+          <div class="footer-menu">
+            <ul>
+              <li><a href="./index.html">Início</a></li>
+              <li><a href="./index.html#sobre">Sobre</a></li>
+              <li><a href="./index.html#produtos">Produtos</a></li>
+              <li><a href="#mapa">Contato</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="social-icons">
+            <ul>
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+              <li><a href="#"><i class="fa fa-rss"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="copyright-text">
+            <p>TECHGOLINFO &copy; Todos os direitos reservados
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./vendor/jquery/jquery-3.6.0.min.js"></script>
+  <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="./vendor/owl/js/owl.js"></script>
+  <script src="./vendor/jquery_Mask/jquery.mask.min.js"></script>
+  <script src="./js/contato.js"></script>
+</body>
+
+</html>

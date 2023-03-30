@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/css/libsmin.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./assets/images/Logotipo-000.png" type="image/x-icon">
+    <title>TechGol - Frete grátis pra todo Brasil</title>
+</head>
+
+<body>
+    <!--Menu responsivo -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container-fluid">
+            <div class="toggler2">
+                <div id="effect2">
+                    <div>
+                        <a class="navbar-brand" href="https://www.techgolinfo.com.br/" target="_blank">
+                            <div class="logo">
+                                <img id="button2" src="assets/images/logo-md.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page">Início
+                            <!-- <span class="sr-only">(Pág)</span> -->
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#featured">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobreNos">Sobre nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#contato-modal">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="sobreNos" class="banner">
+        <!-- <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="caption">
+                        <h2>TechGolinfo Onward</h2>
+                        <div class="line-dec"></div>
+                        <p>Hardware & Periféricos. </p>
+                        <p>Aqui você encontra tudo em um só lugar pra te levar pra uma nova esperiência tecnologica!</p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+
+    <div id="featured" class="featured-items">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <div class="line-dec"></div>
+                        <h1>Destaques</h1>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="owl-carousel owl-theme">
+                        <div class="featured-item" title="Top de linha">
+                            <img src="assets/images/AsusRogTufGamers.jpg" alt="Item 1">
+                            <h4>Asus Rog TUF b5500</h4>
+                            <h6>R$ 1600,00</h6>
+                            <button class="btn btn-secondary" type="button" data-bs-toggle="modal"
+                                data-bs-target="#modal-1">Descrição</button>
+                            <a href="https://techgolinfo.com.br/kingstar-headset-wired-gamer-rgb-63ce1184edd6a/p">Ver na
+                                loja</a>
+                        </div>
+                        <div class="featured-item">
+                            <img src="assets/images/gamemax-infinity.jpg" alt="Item 2">
+                            <h4>Game-Max Infinity</h4>
+                            <h6>R$ 795,00</h6>
+                            <button class="btn btn-secondary" type="button" data-bs-toggle="modal"
+                                data-bs-target="#modal-2">Descrição</button>
+                            <a href="https://techgolinfo.com.br/kingstar-headset-wired-gamer-rgb-63ce1184edd6a/p">Ver na
+                                loja</a>
+                        </div>
+                        <div class="featured-item">
+                            <img src="assets/images/RTX2070Sup.jpg" alt="Item 3">
+                            <h4>Geforce RTX2070 super 8GB</h4>
+                            <h6>R$ 3500,00</h6>
+                            <button class="btn btn-secondary" type="button" data-bs-toggle="modal"
+                                data-bs-target="#modal-3">Descrição</button>
+                            <a href="https://techgolinfo.com.br/kingstar-headset-wired-gamer-rgb-63ce1184edd6a/p">Ver na
+                                loja</a>
+                        </div>
+                        <div class="featured-item">
+                            <img src="assets/images/Ryzen7-5700x.jpg" alt="Item 4">
+                            <h4>Ryzen 7 5700x eight-core</h4>
+                            <h6>R$ 1900,00</h6>
+                            <button class="btn btn-secondary" type="button" data-bs-toggle="modal"
+                                data-bs-target="#modal-4">Descrição</button>
+                            <a href="https://techgolinfo.com.br/kingstar-headset-wired-gamer-rgb-63ce1184edd6a/p">Ver na
+                                loja</a>
+                        </div>
+                        <div class="featured-item">
+                            <img src="assets/images/water-cooler-superframe.jpg" alt="Item 5">
+                            <h4>Water Cooler Superframe ARGB</h4>
+                            <h6>R$ 800,00</h6>
+                            <button class="btn btn-secondary" type="button" data-bs-toggle="modal"
+                                data-bs-target="#modal-5">Descrição</button>
+                            <a href="https://techgolinfo.com.br/kingstar-headset-wired-gamer-rgb-63ce1184edd6a/p">Ver na
+                                loja</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- AREA DOS MODAIS DESCRIÇÃO DOS PRODUTOS-->
+    <div class="modal fade" id="modal-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <i class="fa-solid fa-computer-classic"></i>&nbsp;
+                    <h5 class="modal-title">Placa-Mãe</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Motherboards</th>
+                                <th>Chipset</th>
+                                <th>Preço</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Asus TUF Gaming B550M-Plus</th>
+                                <th>AMD B550</th>
+                                <th>R$999,00</th>
+                            </tr>
+                            <tr>
+                                <th>Asus TUF Gaming Z690-Plus D4</th>
+                                <th>Z690</th>
+                                <th>R$1399,00</th>
+                            </tr>
+                            <tr>
+                                <th>Asus TUF Gaming X570-Plus</th>
+                                <th>AMD X570</th>
+                                <th>R$1549,99</th>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        Fechar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-4">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <i class="fa-solid fa-microchip"></i>&nbsp;
+                    <h5 class="modal-title">Processador</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Modelo</th>
+                                <th>Vídeo integrado</th>
+                                <th>Preço</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Ryzen 7 5700G</th>
+                                <th>Vega 8</th>
+                                <th>R$1916,47</th>
+                            </tr>
+                            <tr>
+                                <th>Ryzen 5 7600X</th>
+                                <th>Radeon Graphics RDNA2</th>
+                                <th>R$2398,82</th>
+                            </tr>
+                            <tr>
+                                <th>i7-11700k</th>
+                                <th>Intel UHD Graphics 750</th>
+                                <th>R$2870,47</th>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        Fechar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-5">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cooler</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Modelo</th>
+                                <th>Tamanho</th>
+                                <th>Preço</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Air Cooler Rise Mode Gamer G800</th>
+                                <th>180mm</th>
+                                <th>R$88,22</th>
+                            </tr>
+                            <tr>
+                                <th>Water Cooler Corsair H60 Hydro Series</th>
+                                <th>120mm</th>
+                                <th>R$389,99</th>
+                            </tr>
+                            <tr>
+                                <th>WATER COOLER CORSAIR ICUE H100I RGB PRO XT</th>
+                                <th>240mm</th>
+                                <th>R$690,10</th>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        Fechar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- INSCREVA-SE NA NOSSAS NEWSLETTERS-->
+    <section id="cadastro" class="cadastro">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 col-sm-12">
+                    <h2>Receba novidades e ofertas incríveis!</h2>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="row g-3">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6 input-group-lg">
+                        <input type="text" class="form-control" name="nome" placeholder="ex: João" id="nomeInput">
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6 input-group-lg">
+                        <input type="text" class="form-control" name="Email" placeholder="Digite seu e-mail"
+                            id="emailInput" aria-describedby="inputGroup-sizing-lg">
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <button type="submit" class="btn btn-lg" id="btnCadastrar">Cadastrar-se</button>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal contate-nos -->
+    <div id="contato-modal" class="modal fade">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a class="pagContato" href="./contato.html">
+                        <h4 class="modal-title">Contate-nos</h4>
+                    </a>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col" id="form-contato">
+                        <form class="form px-4 py-3">
+                            <div class="mb-3">
+                                <label for="FormName" class="form-label">Primeiro Nome</label>
+                                <input type="text" class="form-control" name="nome" id="FormName" placeholder="Nome"
+                                    aria-describedby="helpNome" title="Qual o seu nome?">
+                                <small id="helpNome" class="text-muted">Nome inválido, digite mais de 3
+                                    caracteres!</small>
+                            </div>
+                            <div class="mb-3">
+                                <label for="FormEmail1" class="form-label">Email
+                                    Principal</label>
+                                <input type="email" class="form-control" id="FormEmail1" placeholder="email@example.com"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="FormCPF" class="form-label">CPF</label>
+                                <input type="text" class="form-control" id="FormCPF" name="FormCPF"
+                                    placeholder="111.111.111-11" aria-describedby="helpCPF">
+                                <small id="helpCPF" class="text-muted">CPF inválido!</small>
+                            </div>
+                            <button type="submit" class="btn btn-lg btn-outline-primary">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer footer">
+                    <a href="./contato.html">TechGOL</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- RODAPÉ -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <a class="navbar-brand" href="https://www.techgolinfo.com.br/" target="_blank">
+                        <img src="assets/images/logo-lg.png" alt="logo tech gol" class="logo-rp"
+                            title="click aqui e visite nossa loja.">
+                    </a>
+                </div>
+                <div class="col-md-12">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="#top">Início</a></li>
+                            <li><a href="#">Ajuda</a></li>
+                            <li><a href="#">Termos de Privacidade </a></li>
+                            <li><a href="#">Como funciona?</a></li>
+                            <li><a href="#">Contato</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="social-icons">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                            <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sub-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="copyright-text">
+                        <p>TECHGOLINFO &copy; Todos os direitos reservados
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./dist/js/libs.min.js"></script>
+    <script src="./js/custom.js"></script>
+    <script src="./js/efeitosJUI.js"></script>
+
+</body>
+
+</html>
