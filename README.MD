@@ -1,0 +1,2 @@
+COMANDO GIT PARA LIMPAR CACHE
+git rm -r --cached 
