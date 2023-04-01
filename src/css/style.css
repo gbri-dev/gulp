@@ -1,5 +1,5 @@
 body {
-	caption font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	transition: all 0.5s;
 }
 
@@ -141,7 +141,7 @@ a {
 /* Banner Style */
 .banner {
 	margin-top: 50px;
-	background-image: url(../assets/images/bannerPrincipal.png);
+	background-image: url(../images/bannerPrincipal.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	padding: 150px 0px;
