@@ -1,57 +1,49 @@
 const gulp = require('gulp')
-const concat = require('gulp-concat')
-const cssmin = require('gulp-cssmin')
-const rename = require('gulp-rename')
-const uglify = require('gulp-uglify')
-const image = require('gulp-image')
+const sass = require('gulp-sass')(require('sass'))
+const sourcemaps = require('gulp-sourcemaps')
 
-function tarefasCss(gp) {
-
-  return gulp.src([
-    './node_modules/bootstrap/dist/css/bootstrap.css',
-    './vendor/owl/css/owl.css',
-    './node_modules/@fortawesome/fontawesome-free/css/fontawesome.css',
-    './vendor/jquery-ui/jquery-ui.css',
-    './src/css/style.css'
-  ])
-    .pipe(concat('styles.css'))
-    .pipe(cssmin())
-    .pipe(rename({ suffix: 'min' })) // libs.min.css
-    .pipe(gulp.dest('./dist/css'))
+function compilaSass(){
+  return gulp.src('./source/styles/main.scss').pipe(sourcemaps.init())
+  .pipe(sass(
+    {
+      outputStyle: 'compressed'
+    }
+  )).pipe(sourcemaps.write('./maps'))/* ./build/styles/maps */
+  .pipe(gulp.dest('./build/styles'))
 }
 
-function tarefasJS() {
-  return gulp.src([
-    './node_modules/jquery/dist/jquery.js',
-    './node_modules/bootstrap/dist/js/bootstrap.js',
-    './vendor/owl/js/owl.js',
-    './vendor/jquery-mask/jquery.mask.js',
-    './vendor/jquery-ui/jquery-ui.js',
-    './src/js/custom.js',
-    './src/js/efeitosJUI.js'
-  ])
-    .pipe(concat('scripts.js'))
-    .pipe(uglify())
-    .pipe(rename({ suffix: '.min' })) //libs.min.js
-    .pipe(gulp.dest('./dist/js'))
+function funcaoDefault(callback){
+  setTimeout(function(){
+    console.log("Executando via gulp...")
+    callback()
+  }, 1000)
 }
 
-function tarefasImagem() {
-  return gulp.src('./src/images/*')
-    .pipe(image({
-      pngquant: true,
-      optipng: false,
-      zopflipng: true,
-      jpegRecompress: false,
-      mozjpeg: true,
-      gifsicle: true,
-      svgo: true,
-      concurrent: 10,
-      quiet: true
-    }))
-    .pipe(gulp.dest('./dist/images'))
+function dizerOi(callback){
+  console.log('Olá, bem vindo ao gulp')
+  dizerBye()
+  callback()
 }
 
-exports.styles = tarefasCss
-exports.scripts = tarefasJS
-exports.imagens = tarefasImagem
+/*essa função não é acessivel pelo terminal, privada */
+function dizerBye(){
+  console.log("bye bye ... ")
+}
+
+// /* npm run gulp */
+// exports.default = funcaoDefault
+// /* npm run gulp dizerOi */
+// exports.dizerOi = dizerOi
+
+//Executa de forma serial (series)
+// exports.default = gulp.series(funcaoDefault, dizerOi)
+
+/* Executar tarefas de forma paralela (parallel) */
+exports.default = gulp.parallel(funcaoDefault, dizerOi)
+
+exports.sass = compilaSass
+
+// npm run gulp watch
+exports.watch = function(){
+  gulp.watch('./source/styles/*.scss', {ignoreInitial: false}, gulp.series(compilaSass))
+}
