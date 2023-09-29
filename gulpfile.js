@@ -2,9 +2,17 @@ const gulp = require('gulp')
 const sass = require('gulp-sass')(require('sass'))
 const sourcemaps = require('gulp-sourcemaps')
 const uglify = require('gulp-uglify')
+const obfuscate = require('gulp-obfuscate')
+const imagemin = require('gulp-imagemin')
+
+function comprimeImagens(){
+  return gulp.src('./source/images/*')
+  .pipe(imagemin())
+  .pipe(gulp.dest('./build/images'))
+}
 
 function comprimeJavaScript(){
-  return gulp.src('./source/scritps/*.js').pipe(uglify()).pipe(gulp.dest('./build/scripts'))
+  return gulp.src('./source/scripts/*.js').pipe(uglify()).pipe(obfuscate()).pipe(gulp.dest('./build/scripts'))
 }
 
 function compilaSass(){
@@ -17,39 +25,9 @@ function compilaSass(){
   .pipe(gulp.dest('./build/styles'))
 }
 
-function funcaoDefault(callback){
-  setTimeout(function(){
-    console.log("Executando via gulp...")
-    callback()
-  }, 1000)
-}
-
-function dizerOi(callback){
-  console.log('Olá, bem vindo ao gulp')
-  dizerBye()
-  callback()
-}
-
-/*essa função não é acessivel pelo terminal, privada */
-function dizerBye(){
-  console.log("bye bye ... ")
-}
-
-// /* npm run gulp */
-// exports.default = funcaoDefault
-// /* npm run gulp dizerOi */
-// exports.dizerOi = dizerOi
-
-//Executa de forma serial (series)
-// exports.default = gulp.series(funcaoDefault, dizerOi)
-
-/* Executar tarefas de forma paralela (parallel) */
-exports.default = gulp.parallel(funcaoDefault, dizerOi)
-
-exports.sass = compilaSass
-
 // npm run gulp watch
-exports.watch = function(){
+exports.default = function(){
   gulp.watch('./source/styles/*.scss', {ignoreInitial: false}, gulp.series(compilaSass))
+  gulp.watch('./source/scripts/*.js', {ignoreInitial: false}, gulp.series(comprimeJavaScript))
+  gulp.watch('./source/images/*', {ignoreInitial: false}, gulp.series(comprimeImagens))
 }
-exports.javascript = comprimeJavaScript
